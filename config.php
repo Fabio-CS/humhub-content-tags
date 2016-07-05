@@ -1,6 +1,7 @@
 <?php
 
 use app\modules\contenttags\Module;
+use humhub\modules\content\widgets\WallEntryAddons;
 use humhub\modules\content\widgets\WallEntryLinks;
 
 return [
@@ -8,7 +9,7 @@ return [
     'class' => 'app\modules\contenttags\Module',
     'namespace' => 'app\modules\contenttags',
     'events' => array(
-        array('class' => WallEntryLinks::className(), 'event' => WallEntryLinks::EVENT_INIT, 'callback' => array('app\modules\contenttags\Events', 'onWallEntryLinksInit')),
+        array('class' => WallEntryAddons::className(), 'event' => WallEntryAddons::EVENT_INIT, 'callback' => array('app\modules\contenttags\Events', 'onWallEntryAddonsInit')),
     ),
 ];
 ?>

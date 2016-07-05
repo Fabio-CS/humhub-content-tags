@@ -1,11 +1,14 @@
 <?php
+namespace app\modules\contenttags;
+
 use yii\helpers\Html;
+Assets::register($this);
 ?>
-<span class="TagsContainer">
-	<div class="" id="">
-	    <?= Html::a('<a class="label label-default" href="#">HTML</a>');?>
-            <?= Html::a('<a class="label label-default" href="#">Javascript</a>');?>
-            <?= Html::a('<a class="label label-default" href="#">CSS</a>');?>
+<div class="tags-container">
+	<div class="content-tags">
+            <h3><?php /* print_r($content) */?></h3>
+            <?php foreach($object->content->tags as $tag) {
+                echo Html::a('<a class="label label-default" href="#' . $tag->id . '">' . $tag->name . '</a> &nbsp;'); }
+            ?>
 	</div>
-</span>
-<br>
+</div>

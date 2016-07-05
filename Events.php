@@ -18,9 +18,9 @@ class Events extends \yii\base\Object
         ));
     }
     
-    public static function onWallEntryLinksInit($event)
+    public static function onWallEntryAddonsInit($event)
     {
-    	$event->sender->addWidget(widgets\ContentTags::className(), array('object' => $event->sender->object), array('sortOrder' => 10));
+    	$event->sender->addWidget(widgets\ContentTags::className(), array('object' => $event->sender->object), array('sortOrder' => 1));
     }
 
 }

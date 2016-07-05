@@ -10,7 +10,11 @@ class ContentTags extends \yii\base\Widget
 {
 
     public $object;
-
+    
+    public function init(){
+        
+    }
+    
     public function run()
     {
     	$permaLink = Url::to(['/content/perma', 'id' => $this->object->content->id], true);
